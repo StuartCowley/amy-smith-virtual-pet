@@ -1,0 +1,14 @@
+{
+  "name": "virtual-pet",
+  "version": "4.0.0",
+  "description": "Exercise using js prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Manchester Codes",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
