@@ -70,3 +70,38 @@ describe('constructor', () => {
       expect(pet.fitness).toEqual(7);
     });
   });
+
+  describe('walk', () => {
+    it('increases fitness by 4', () => {
+      const pet = new Pet('fido');
+  
+      pet.fitness = 4;
+      pet.walk();
+  
+      expect(pet.fitness).toEqual(8);
+    });
+  });
+
+  describe('walk', () => {
+    it('increases fitness to a maximum of 10', () => {
+
+      const pet = new Pet('fido');
+  
+      pet.fitness = 8;
+      pet.walk();
+  
+      expect(pet.fitness).toEqual(10);
+    });
+  });
+
+  describe('feed', () => {
+    it('decreases hunger by 3', () => {
+
+      const pet = new Pet('fido');
+  
+      pet.hunger = 9;
+      pet.feed();
+  
+      expect(pet.hunger).toEqual(6);
+    });
+  });  
