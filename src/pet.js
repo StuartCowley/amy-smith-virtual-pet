@@ -30,4 +30,25 @@ Pet.prototype.growUp = function() {
     }
   };
 
+  Pet.prototype.checkUp = function() {
+    const doesPetNeedWalk = this.fitness <= 3;
+    const isPetHungry = this.hunger >= 5;
+    let result = "I feel great";
+    const needWalk = 'I need a walk';
+    const hungry = 'I am hungry';
+
+    if (doesPetNeedWalk) {
+      result = needWalk;
+     }
+    
+     if (isPetHungry) {
+        result = hungry;
+      }
+
+     if (doesPetNeedWalk && isPetHungry) {
+        result = `${hungry} AND ${needWalk}`;
+      }
+      return result;
+    };
+
 module.exports = Pet;
