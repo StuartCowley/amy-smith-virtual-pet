@@ -153,3 +153,31 @@ describe('feed', () => {
         expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
       });
     });
+
+describe('constructor', () => {
+    const pet = new Pet ('Fido');
+    it('has an empty child array', () => {
+        expect(pet.children.length).toBe(0);
+    });
+});
+
+    describe('adoptChild', () => {
+        const pet = new Pet ('Fido');
+        const child = new Pet('Dino');
+
+    it('when adopting a baby', () => {
+        pet.adoptChild(child);
+
+        expect(pet.children[0].name).toBe('Dino');
+    });
+});
+    describe('haveBaby', () => {
+        const pet = new Pet ('Fido');
+
+    it('when having a baby', () => {
+      
+        pet.haveBaby('Amelia');
+
+        expect(pet.children[0].name).toBe('Amelia');
+    });
+});

@@ -6,6 +6,7 @@ function Pet(name) {
     this.age = 0;
     this.hunger = minHungerLevel;
     this.fitness = MAXIMUM_FITNESS;
+    this.children = [];
 };
 
 Pet.prototype = {
@@ -68,5 +69,15 @@ Pet.prototype.growUp = function() {
       }
       return result;
     };
+
+    Pet.prototype.haveBaby = function(babyName) { 
+        const baby = new Pet(babyName);
+        this.children.push(baby);
+    }
+
+    Pet.prototype.adoptChild = function(child) {
+        this.children.push(child);
+    }
+
 
 module.exports = Pet;
