@@ -4,7 +4,7 @@
   "description": "Exercise using js prototype",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose --bail"
   },
   "author": "Manchester Codes",
   "license": "ISC",
